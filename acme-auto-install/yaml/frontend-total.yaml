@@ -10,6 +10,7 @@ spec:
     - name: http-frontend
       protocol: TCP
       port: 80
+      nodePort: 30090
       targetPort: 3000
   selector:
     app: acmefit
