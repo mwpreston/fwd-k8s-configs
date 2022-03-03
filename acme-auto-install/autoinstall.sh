@@ -1,6 +1,7 @@
 ACME_NAMESPACE="ZFG-OUTLET"
 ACME_SECRET="ZFGSECRET"
 
+kubectl create ns ${ACME_NAMESPACE}
 kubectl -n ${ACME_NAMESPACE} create secret generic cart-redis-pass --from-literal=password=${ACME_SECRET}
 kubectl -n ${ACME_NAMESPACE} apply -f yaml/cart-redis-total.yaml
 kubectl -n ${ACME_NAMESPACE} apply -f yaml/cart-total.yaml
