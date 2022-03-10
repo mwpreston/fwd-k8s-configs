@@ -9,5 +9,6 @@ metadata:
     app.kubernetes.io/part-of: csi-driver-host-path
     app.kubernetes.io/name: csi-hostpath-snapclass
     app.kubernetes.io/component: volumesnapshotclass
+    velero.io/csi-volumesnapshot-class: true
 driver: hostpath.csi.k8s.io #csi-hostpath
-deletionPolicy: Delete
+deletionPolicy: Retain 
