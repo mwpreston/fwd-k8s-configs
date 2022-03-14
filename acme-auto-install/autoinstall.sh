@@ -7,7 +7,7 @@ kubectl -n ${ACME_NAMESPACE} apply -f yaml/cart-redis-total.yaml
 kubectl -n ${ACME_NAMESPACE} apply -f yaml/cart-total.yaml
 kubectl -n ${ACME_NAMESPACE} create secret generic catalog-mongo-pass --from-literal=password=${ACME_SECRET}
 kubectl -n ${ACME_NAMESPACE} create -f yaml/catalog-db-initdb-configmap.yaml
-kubectl -n ${ACME_NAMESPACE} apply -f yaml/catalog-db-total.yaml
+kubectl -n ${ACME_NAMESPACE} apply -f yaml/catalog-db-total-hostpath.yaml
 kubectl -n ${ACME_NAMESPACE} apply -f yaml/catalog-total.yaml
 kubectl -n ${ACME_NAMESPACE} apply -f yaml/payment-total.yaml
 kubectl -n ${ACME_NAMESPACE} create secret generic order-postgres-pass --from-literal=password=${ACME_SECRET}
