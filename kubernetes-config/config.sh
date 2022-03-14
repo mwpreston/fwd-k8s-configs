@@ -31,3 +31,5 @@ kubectl apply -f /home/admin/fwd-k8s-configs/kubernetes-config/v1crd/snapshot.st
 /home/admin/fwd-k8s-configs/kubernetes-config/hostpathcsi/deploy/kubernetes-1.21/deploy.sh
 
 kubectl apply -f /home/admin/fwd-k8s-configs/kubernetes-config/hostpathcsi/examples/csi-storageclass.yaml
+
+kubectl apply -f /home/admin/fwd-k8s-configs/kubernetes-config/hostpathcsi/deploy/kubernetes-1.21/hostpath/csi-hostpath-snapshotclass.yaml
